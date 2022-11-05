@@ -5,6 +5,21 @@ import json
 @bottle.route("/")
 def index():
   return bottle.static_file("index.html",".")
+@bottle.route("/index.html")
+def index():
+  return bottle.static_file("index.html",".")
+@bottle.route("/dashboard.html")
+def dashboard():
+  return bottle.static_file("dashboard.html",".")
+@bottle.route("/about_us.html")
+def aboutus():
+  return bottle.static_file("about_us.html",".")
+@bottle.route('/<filename>.css')
+def stylesheets(filename):
+    return bottle.static_file('{}.css'.format(filename),root="")
+@bottle.route('/images/<filename:re:.*\.png>')
+def send_image(filename):
+    return bottle.static_file(filename, root='images/', mimetype='image/png')
 
 @bottle.route("/ajax.js")
 def javascript():
@@ -26,7 +41,6 @@ def sendPieGraph():
     }]
     return json.dumps(pie_values)
 
-sendPieGraph()
 @bottle.post("/linegraph")
 def sendLineGraph():
     content=bottle.request.body.read().decode()
@@ -40,3 +54,4 @@ def sendLineGraph():
         }]
     return json.dumps(line_values)
 
+bottle.run(host = "0.0.0.0",port = 8080)
