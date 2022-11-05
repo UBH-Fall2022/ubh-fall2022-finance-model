@@ -20,7 +20,7 @@ def sendPieGraph():
     textbox=json.loads(content)
     data = processing.portions(textbox)
     pie_values = [{
-    "values": [data[0],data[1],data[2]],
+    "values": [data[0], data[1], data[2]],
     "labels": ['Needs', 'Wants', 'Savings'],
     "type": 'pie'
     }]
@@ -32,21 +32,9 @@ sendPieGraph()
 def sendLineGraph():
   content=bottle.request.body.read().decode()
   textbox=json.loads(content)
-  print(textbox)
-  load=data.load_data("saved_data.csv")
-  location=processing.copy_matching(load,'location',textbox)
-  location.sort(key=sort_Date)
-  xvalues=[]
-  yvalues=[]
-  print(textbox)
-  for key in location:
-    xvalues.append(key['date'])
-    yvalues.append(key['series_complete_pop_pct'])
-  line_values = [{
-    "x": xvalues,
-    "y": yvalues,
-    "type": 'scatter'
-  }];
+  years = processing.annualYears
+  xvalues = range(2022,2033)
+  yvalues = processing.annualAmount()
   print(line_values)
   return json.dumps(line_values)
 

@@ -29,14 +29,11 @@ def sum_matches(lod,k,v,tgt):
 def portions(num):
     return [num * 0.5,num * 0.3,num * 0.2]
 
-def weekly(data, num, section):  # calculate the weekly portions with 50, 30, 20
-    out = 0
-    for arr in data: 
-        for elem in arr:
-            if elem == num:
-                num * 0.5
-                num * 0.3
-                num * 0.2
+def annualAmount(an,sav):
+    data = []
+    for i in range(0,11):
+        data.append(((an * 0.2) * i)+sav)
+    return data
 
 
 def copy_matching(lod,k,v):
