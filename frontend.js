@@ -24,8 +24,12 @@ function getData(){
     ajaxGetRequest('/barchart',graphBarChart);
   }
   
-  function getLocData(){
-    let id=document.getElementById("locText")
-    let string=JSON.stringify(id["value"])
+  function getGraphs(){
+    let id=document.getElementById("annual");
+    let id2=document.getElementById("sc");
+    let string=JSON.stringify([id["value"],id2["value"]]);
     ajaxPostRequest('/linegraph', string, sendLineGraph);
+    id = document.getElementById("weekly");
+    string=JSON.stringify(id["value"]);
+    ajaxPostRequest('/piegraph', string, sendPieGraph);
   }

@@ -27,13 +27,12 @@ def sendPieGraph():
     return json.dumps(pie_values)
 
 sendPieGraph()
-
 @bottle.post("/linegraph")
 def sendLineGraph():
-  content=bottle.request.body.read().decode()
-  textbox=json.loads(content)
-  xvalues= range(2022, 2033)
-  yvalues= processing.annualAmount
-
-  return json.dumps(line_values)
+    content=bottle.request.body.read().decode()
+    textbox=json.loads(content)
+    xvalues= range(2022, 2033)
+    yvalues= processing.annualAmount(textbox[0],textbox[1])
+    line_values = [{"x":xvalues,"y":yvalues,"type":'scatter'}]
+    return json.dumps(line_values)
 
