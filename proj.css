@@ -7,7 +7,7 @@ body{
     overflow-x: hidden;
     animation: fadeInAnimation;
     animation-duration: 4.5s;
-    font-family: "Trirong",serif;
+    font-family: "Optima", serif;
 }
 
 .center{
@@ -29,13 +29,13 @@ div.body{
 
 h1 {
     text-align: center;
-    font-family: "Trirong", serif;
+    font-family: "Optima", serif;
     color: #ffffff; 
     font-size: 56px; 
   }
 
 h2{
-    font-family: "Trirong", serif;
+    font-family: "Optima", serif;
     color:#000000;
     text-align:center;
 }
@@ -54,45 +54,45 @@ img.frame{
 }
     
 #footer p{
-    font-family: "Trirong", serif;
+    font-family: "Optima", serif;
     color:#ffffff;
     text-align: center;
     line-height:30px;
 }
 p.center_align{
-    font-family: "Trirong", serif;
+    font-family: "Optima", serif;
     color:#000000;
     /*padding: 20px;*/
     text-align: center;   
     font-size: 16px;
 }
 p.left_align{
-    font-family: "Trirong", serif;
+    font-family: "Optima", serif;
     color:#000000;
     /*padding: 20px;*/
     text-align: left;
-    font-size: 16px;
+    font-size: 18px;
 }
 p.right_float{
     float: right; 
     padding-right:45px ;
-    font-family: Trirong, serif; 
+    font-family: "Optima", serif;
     color:#000000;
-    font-size: 16px;
+    font-size: 18px;
 }
 ul{
-    font-family: "Trirong", serif;
+    font-family: "Optima", serif;
     color: #000000;
     padding-top: 0px;
     padding-bottom: 10px;
 }
 li{
-    font-family: "Trirong", serif;
+    font-family: "Optima", serif;
     color: #000000;
     font-size: 16px;
 }
 ul.nav {
-    font-family: "Trirong", serif;
+    font-family: "Optima", serif;
     background-color: #346aa4;
     list-style-type: none;
     margin: 0;
@@ -104,7 +104,7 @@ ul.nav {
 }
 li.nav {
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
 }
 a:link{
     color:#6d8088;
