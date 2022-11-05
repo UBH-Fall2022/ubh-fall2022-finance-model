@@ -1,4 +1,4 @@
-def max_value(data,y):
+def max_value(data,y): 
   word=""
   for dict in data:
     for key in dict:
@@ -25,6 +25,19 @@ def sum_matches(lod,k,v,tgt):
         if dict[key]==v:
           out+=float(dict[tgt])
   return out
+
+def portions(num):
+    return [num * 0.5,num * 0.3,num * 0.2]
+
+def weekly(data, num, section):  # calculate the weekly portions with 50, 30, 20
+    out = 0
+    for arr in data: 
+        for elem in arr:
+            if elem == num:
+                num * 0.5
+                num * 0.3
+                num * 0.2
+
 
 def copy_matching(lod,k,v):
   out=[]

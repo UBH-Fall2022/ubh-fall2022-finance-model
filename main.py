@@ -1,4 +1,6 @@
 import bottle
+import processing
+import json
 
 @bottle.route("/")
 def index():
@@ -14,19 +16,15 @@ def graphJavascript():
 
 @bottle.route("/piegraph")
 def sendPieGraph():
-  load=data.load_data("saved_data.csv")  
-  dates=processing.max_value(load,'date')
-  jan_val=processing.sum_matches(load,'date',dates,'administered_janssen')
-  mod_val=processing.sum_matches(load,'date',dates,'administered_moderna') 
-  pfi_val=processing.sum_matches(load,'date',dates,'administered_pfizer') 
-  unk_val=processing.sum_matches(load,'date',dates,'administered_unk_manuf')
-
-  pie_values = [{
-  "values": [jan_val,mod_val,pfi_val,unk_val],
-  "labels": ['Janssen', 'Moderna', 'Pfizer', 'Other'],
-  "type": 'pie'
-  }];
-  return json.dumps(pie_values)
+    content=bottle.request.body.read().decode()
+    textbox=json.loads(content)
+    data = processing.portions(textbox)
+    pie_values = [{
+    "values": [data[0],data[1],data[2]],
+    "labels": ['Needs', 'Wants', 'Savings'],
+    "type": 'pie'
+    }]
+    return json.dumps(pie_values)
 
 sendPieGraph()
 
