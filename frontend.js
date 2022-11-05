@@ -24,5 +24,7 @@ function getGraphs(){
     let id3 = document.getElementById("weekly");
     let string3 =JSON.stringify(id3["value"]);
     ajaxPostRequest('/linegraph', string, sendLineGraph);
-    ajaxPostRequest('/piegraph', string3, sendPieGraph);
-}
+    id = document.getElementById("weekly");
+    string=JSON.stringify(id["value"]);
+    ajaxPostRequest('/piegraph', string, sendPieGraph);
+  }
