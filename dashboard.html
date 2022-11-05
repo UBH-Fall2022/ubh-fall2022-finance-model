@@ -10,6 +10,9 @@
     <!-- Edit Logo -->
     <link rel="icon" href = "images/fisionLogo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="jsonAJAX.js"></script>
+    <script src="frontend.js"></script>
 </head>
 <body>
     <div class = "header">
@@ -22,6 +25,18 @@
     </div>
     <br>
     <div class = "body">
+        <h2>User Dashboard</h2>
+        <p class = "center_align">Welcome to the dashboard! Here you can view visualizations of your finances!</p>
+        <p class = "center_align">In the marked boxes, please enter 1) your weekly wages, 2) your annual salary, and 3) you checking and savings amounts.</p>
+        <div>
+            <input value = "Weekly" type="text" id="weekly" class = "center"></input>
+            <input value = "Annual" type="text" id="annual" class = "center"></input>
+            <input value = "Saving & Checking" type="text" id="sc" class = "center"></input>
+        </div>
+        <p class = "center_align" style="font-size: 10px;">**Note: none of the inputted financial information is ever saved.</p>
+        <button onclick="getLocData();" class = "center">Give me the visuals!</button>
+        <div id ="pie"></div>
+        <div id ="line"></div>
         </div>
     <div id = "footer">
     </div>            

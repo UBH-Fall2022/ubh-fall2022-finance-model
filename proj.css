@@ -62,14 +62,14 @@ img.frame{
 p.center_align{
     font-family: "Trirong", serif;
     color:#000000;
-    padding: 20px;
+    /*padding: 20px;*/
     text-align: center;   
     font-size: 16px;
 }
 p.left_align{
     font-family: "Trirong", serif;
     color:#000000;
-    padding: 20px;
+    /*padding: 20px;*/
     text-align: left;
     font-size: 16px;
 }
