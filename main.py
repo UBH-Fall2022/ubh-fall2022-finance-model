@@ -5,6 +5,21 @@ import json
 @bottle.route("/")
 def index():
   return bottle.static_file("index.html",".")
+@bottle.route("/index.html")
+def index():
+  return bottle.static_file("index.html",".")
+@bottle.route("/dashboard.html")
+def dashboard():
+  return bottle.static_file("dashboard.html",".")
+@bottle.route("/about_us.html")
+def aboutus():
+  return bottle.static_file("about_us.html",".")
+@bottle.route('/<filename>.css')
+def stylesheets(filename):
+    return bottle.static_file('{}.css'.format(filename),root="")
+@bottle.route('/images/<filename:re:.*\.png>')
+def send_image(filename):
+    return bottle.static_file(filename, root='images/', mimetype='image/png')
 
 @bottle.route("/ajax.js")
 def javascript():
