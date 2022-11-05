@@ -18,13 +18,8 @@ function sendLineGraph(jsonBlob) {
     };
     Plotly.newPlot('linegraph', loadData, layout);
 }
-
-function getData(){
-    ajaxGetRequest('/piegraph',sendPieGraph);
-    ajaxGetRequest('/barchart',graphBarChart);
-  }
   
-  function getGraphs(){
+function getGraphs(){
     let id=document.getElementById("annual");
     let id2=document.getElementById("sc");
     let string=JSON.stringify([id["value"],id2["value"]]);
@@ -32,4 +27,4 @@ function getData(){
     id = document.getElementById("weekly");
     string=JSON.stringify(id["value"]);
     ajaxPostRequest('/piegraph', string, sendPieGraph);
-  }
+}
