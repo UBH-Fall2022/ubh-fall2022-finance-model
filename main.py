@@ -26,7 +26,6 @@ def sendPieGraph():
     }]
     return json.dumps(pie_values)
 
-sendPieGraph()
 @bottle.post("/linegraph")
 def sendLineGraph():
     content=bottle.request.body.read().decode()
@@ -36,3 +35,4 @@ def sendLineGraph():
     line_values = [{"x":xvalues,"y":yvalues,"type":'scatter'}]
     return json.dumps(line_values)
 
+bottle.run(host = "0.0.0.0",port = 8080)

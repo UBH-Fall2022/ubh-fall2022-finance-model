@@ -18,11 +18,6 @@ function sendLineGraph(jsonBlob) {
     };
     Plotly.newPlot('linegraph', loadData, layout);
 }
-
-function getData(){
-    ajaxGetRequest('/piegraph',sendPieGraph);
-    ajaxGetRequest('/barchart',graphBarChart);
-  }
   
   function getGraphs(){
     let id=document.getElementById("annual");
