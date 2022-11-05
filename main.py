@@ -33,9 +33,6 @@ def sendLineGraph():
   content=bottle.request.body.read().decode()
   textbox=json.loads(content)
   print(textbox)
-  load=data.load_data("saved_data.csv")
-  location=processing.copy_matching(load,'location',textbox)
-  location.sort(key=sort_Date)
   xvalues=[]
   yvalues=[]
   print(textbox)
