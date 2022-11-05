@@ -45,7 +45,7 @@ def sendLineGraph():
     textbox=json.loads(content)
     xvalues= range(2022, 2033)
     yvalues= processing.annualAmount(float(textbox[0]),float(textbox[1]))
-    line_values = [{"x":xvalues,"y":yvalues,"type"::"line"}]
+    line_values = [{"x":xvalues,"y":yvalues,"type":"line"}]
     return json.dumps(line_values)
 
 bottle.run(host = "0.0.0.0",port = 8080)
