@@ -172,6 +172,51 @@ br.right{
     clear:right;
 }
 
+#accordian{
+    margin: 100px auto;
+    width: 600px
+}
+
+#accordian li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius:4px;
+}
+
+#accordian li label{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #c20000;
+}
+
+#accordian li label span{
+    transform: rotate(90deg);
+    font-size: 20px;
+    color: #333;
+}
+#accordian label +input[type = "radio"]{
+    display: none;
+}
+
+#accordian .content{
+    padding: 0 10px;
+    line-height: 24px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+#accordian label +input[type = "radio"]:checked + .content{
+    max-height: 600px;
+}
+
 #wrapper {
     margin-left:auto;
     margin-right:auto;
