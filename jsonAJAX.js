@@ -16,9 +16,9 @@ function ajaxGetRequest(path, callback) {
 function ajaxPostRequest(path, data, callback) {
     let request = new XMLHttpRequest();
     request.onreadystatechange = function() {
-          if (this.readyState===4 && this.status ===200) {
-              callback(this.response);
-            }
+      if (this.readyState===4 && this.status ===200) {
+          callback(this.response);
+        }
     }
     request.open("POST", path);
     request.send(data);

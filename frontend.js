@@ -17,6 +17,7 @@ function sendLineGraph(jsonBlob) {
     };
     Plotly.newPlot('line', loadData, layout);
 }
+
 function getGraphs(){
     let id=document.getElementById("annual");
     let id2=document.getElementById("sc");
@@ -24,5 +25,7 @@ function getGraphs(){
     let id3 = document.getElementById("weekly");
     let string3 =JSON.stringify(id3["value"]);
     ajaxPostRequest('/linegraph', string, sendLineGraph);
-    ajaxPostRequest("/piegraph", string3, sendPieGraph);
+    id = document.getElementById("weekly");
+    string=JSON.stringify(id["value"]);
+    ajaxPostRequest('/piegraph', string, sendPieGraph);
   }
