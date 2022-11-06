@@ -18,6 +18,9 @@ def aboutus():
 @bottle.route("/FAQ.html")
 def graphJavascript():
     return bottle.static_file("FAQ.html",".")
+@bottle.route("/meme.html")
+def graphJavascript():
+    return bottle.static_file("meme.html",".")   
 @bottle.route('/<filename>.css')
 def stylesheets(filename):
     return bottle.static_file('{}.css'.format(filename),root="")
@@ -27,6 +30,9 @@ def send_image(filename):
 @bottle.route('/images/<filename:re:.*\.JPG>')
 def send_image(filename):
     return bottle.static_file(filename, root='images/', mimetype='image/JPG')
+@bottle.route('/images/<filename:re:.*\.gif>')
+def send_image(filename):
+    return bottle.static_file(filename, root='images/', mimetype='image/gif')
 @bottle.route("/jsonAJAX.js")
 def javascript():
   return bottle.static_file("jsonAJAX.js",".")
