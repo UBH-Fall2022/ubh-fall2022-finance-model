@@ -7,7 +7,7 @@ body{
     overflow-x: hidden;
     animation: fadeInAnimation;
     animation-duration: 4.5s;
-    font-family: "Optima", serif;
+    font-family: "SansSerif", serif;
 }
 
 .center{
@@ -29,13 +29,13 @@ div.body{
 
 h1 {
     text-align: center;
-    font-family: "Optima", serif;
+    font-family: "SansSerif", serif;
     color: #ffffff; 
     font-size: 56px; 
   }
 
 h2{
-    font-family: "Optima", serif;
+    font-family: "SansSerif", serif;
     color:#000000;
     text-align:center;
 }
@@ -54,20 +54,20 @@ img.frame{
 }
     
 #footer p{
-    font-family: "Optima", serif;
+    font-family: "SansSerif", serif;
     color:#ffffff;
     text-align: center;
     line-height:30px;
 }
 p.center_align{
-    font-family: "Optima", serif;
+    font-family: "SansSerif", serif;
     color:#000000;
     /*padding: 20px;*/
     text-align: center;   
     font-size: 16px;
 }
 p.left_align{
-    font-family: "Optima", serif;
+    font-family: "SansSerif", serif;
     color:#000000;
     /*padding: 20px;*/
     text-align: left;
@@ -76,23 +76,23 @@ p.left_align{
 p.right_float{
     float: right; 
     padding-right:45px ;
-    font-family: "Optima", serif;
+    font-family: "SansSerif", serif;
     color:#000000;
     font-size: 18px;
 }
 ul{
-    font-family: "Optima", serif;
+    font-family: "SansSerif", serif;
     color: #000000;
     padding-top: 0px;
     padding-bottom: 10px;
 }
 li{
-    font-family: "Optima", serif;
+    font-family: "SansSerif", serif;
     color: #000000;
     font-size: 16px;
 }
 ul.nav {
-    font-family: "Optima", serif;
+    font-family: "SansSerif", serif;
     background-color: #346aa4;
     list-style-type: none;
     margin: 0;
