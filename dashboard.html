@@ -20,17 +20,31 @@
             <li class = "nav"><a href="index.html" class = "nav">Home</a></li>
             <li class = "nav"><a href="dashboard.html" class = "nav">Dashboard</a></li>
             <li class = "nav"><a href="about_us.html" class = "nav"> About Us </a></li>
-          </ul>
+            <li class = "nav"><a href="FAQ.html" class = "nav"> FAQ </a></li>
+        </ul>
     </div>
     <br>
     <div class = "body">
         <h2>User Dashboard</h2>
         <p class = "center_align">Welcome to the dashboard! Here you can view visualizations of your finances!</p>
-        <p class = "center_align">In the marked boxes, please enter 1) your weekly wages, 2) your annual salary, and 3) your checking and savings amounts.</p>
+        <p class = "center_align">In the marked boxes, please enter:</p>
         <div>
-            <input value = "Weekly" type="text" id="weekly" class = "center"></input>
-            <input value = "Annual" type="text" id="annual" class = "center"></input>
-            <input value = "Saving & Checking" type="text" id="sc" class = "center"></input>
+            <p class = "center_align">
+                <b>Your weekly wages:</b>
+            <input value = "Weekly" type="text" id="weekly" class = "center">
+            </p>
+        </div>
+        <div>
+            <p class = "center_align">
+                <b>Your Annual Salary:</b>
+                <input value = "Annual" type="text" id="annual" class = "center">
+            </p>
+        </div>
+        <div>
+            <p class = "center_align">
+                <b>Your Checking and Savings amount:</b>
+            <input value = "Saving & Checking" type="text" id="sc" class = "center">
+            </p>
         </div>
         <p class = "center_align" style="font-size: 10px;">**Note: none of the inputted financial information is ever saved.</p>
         <button onclick="getGraphs();" class = "center button">Give me the visuals!</button>
