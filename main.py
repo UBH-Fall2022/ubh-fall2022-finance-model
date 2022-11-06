@@ -24,6 +24,9 @@ def stylesheets(filename):
 @bottle.route('/images/<filename:re:.*\.png>')
 def send_image(filename):
     return bottle.static_file(filename, root='images/', mimetype='image/png')
+@bottle.route('/images/<filename:re:.*\.JPG>')
+def send_image(filename):
+    return bottle.static_file(filename, root='images/', mimetype='image/JPG')
 @bottle.route("/jsonAJAX.js")
 def javascript():
   return bottle.static_file("jsonAJAX.js",".")
