@@ -22,7 +22,8 @@ div.header{
     min-height: auto;
 }
 div.body{
-    margin:30px;
+    margin-left:0.75in;
+    margin-right:0.75in;
     min-height: 480px; 
     max-height: auto;
 }
@@ -46,7 +47,7 @@ img.frame{
 #footer{
     width:100%;
     float:left;
-    background-color: #3d4b63;
+    background-color: #FF914D;
     /*bottom:0px;
     left:0px;
     background-color:#3d4b63;
@@ -69,7 +70,6 @@ p.center_align{
 p.left_align{
     font-family: "Geneva";
     color:#000000;
-    /*padding: 20px;*/
     float: left;
     font-size: 16px;
 }
@@ -84,7 +84,7 @@ ul{
     font-family: "Geneva";
     color: #000000;
     padding-top: 0px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
 }
 li{
     font-family: "Geneva";
@@ -168,6 +168,7 @@ img.right{
 }
  
 br.right{
+    padding:10px;
     clear:right;
 }
 
