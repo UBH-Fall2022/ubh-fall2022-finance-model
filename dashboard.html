@@ -26,13 +26,21 @@
     <div class = "body">
         <h2>User Dashboard</h2>
         <p class = "center_align">Welcome to the dashboard! Here you can view visualizations of your finances!</p>
+        <div style="float:left; width: 50%;">
+            <h3>Understanding the Data</h3>
+            <ul>
+                <li>50% of your earnings should go towards necessities. This may include housing cost, grocery cost, travel cost, etc.</li>
+                <li>20% of your earnings should go towards your savings account or other investments. Simply this money should be put aside or used in a means to get a return.</li>
+                <li>30% of your earnings then goes to your pleasure expenses such a takeout food or games. This spending is optional and we advise you to use this money frugaly.</li>
+            </ul>
+        </div>
+
+        <div style="float:right; width: 50%;">
         <p class = "center_align">In the marked boxes, please enter:</p>
-        <div>
             <p class = "center_align">
                 <b>Your Weekly Wages:</b>
             <input value = "Weekly" type="text" id="weekly" class = "center">
             </p>
-        </div>
         <div>
             <p class = "center_align">
                 <b>Your Annual Salary:</b>
@@ -41,16 +49,19 @@
         </div>
         <div>
             <p class = "center_align">
-                <b>Your Checking and Savings amount:</b>
-            <input value = "Saving & Checking" type="text" id="sc" class = "center">
+                <b>Savings amount:</b>
+            <input value = "Saving" type="text" id="sc" class = "center">
             </p>
         </div>
-        <p class = "center_align" style="font-size: 10px;">**Note: none of the inputted financial information is ever saved.</p>
-        <button onclick="getGraphs();" class = "center button">Give me the visuals!</button>
+            <p class = "center_align" style="font-size: 10px;">**Note: none of the inputted financial information is ever saved.</p>
+            <button onclick="getGraphs();" class = "center button">Give me the visuals!</button>
+        </div>
+    </div>
         <div id ="pie"></div>
         <div id ="line"></div>
         </div>
     <div id = "footer">
+        <p class="center_align">Contact Us: elphan@buffalo.edu | evanjian@buffalo.edu | jwu229@buffalo.edu</p>
     </div>            
 </body>
 </html>
