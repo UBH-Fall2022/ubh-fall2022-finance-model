@@ -107,6 +107,16 @@ li.nav {
     display: inline-block;
     font-size: 18px;
 }
+.button {
+    border-radius: 4px;
+    background-color: #346aa4;
+    color:white;
+    transition-duration: 0.4s;
+} 
+.button:hover {
+    background-color: white; /* Green */
+    color: black;
+}
 a:link{
     color:#6d8088;
 }
