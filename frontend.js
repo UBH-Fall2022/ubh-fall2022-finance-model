@@ -2,8 +2,8 @@ function sendPieGraph(jsonBlob){
     let loadData=JSON.parse(jsonBlob)
     let layout = {
       title: 'Weekly Financial Savings Pie Chart',
-      height: 600,
-      width: 700
+      height: 500,
+      width: 600
     };
     Plotly.newPlot('pie',loadData,layout)
 }
