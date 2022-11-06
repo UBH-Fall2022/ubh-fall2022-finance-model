@@ -30,3 +30,4 @@ function getGraphs(){
     string=JSON.stringify(id["value"]);
     ajaxPostRequest('/piegraph', string, sendPieGraph);
   }
+
