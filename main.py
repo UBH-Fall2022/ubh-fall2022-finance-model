@@ -30,6 +30,9 @@ def send_image(filename):
 @bottle.route('/images/<filename:re:.*\.JPG>')
 def send_image(filename):
     return bottle.static_file(filename, root='images/', mimetype='image/JPG')
+@bottle.route('/images/<filename:re:.*\.jpg>')
+def send_image(filename):
+    return bottle.static_file(filename, root='images/', mimetype='image/jpg')
 @bottle.route('/images/<filename:re:.*\.gif>')
 def send_image(filename):
     return bottle.static_file(filename, root='images/', mimetype='image/gif')
