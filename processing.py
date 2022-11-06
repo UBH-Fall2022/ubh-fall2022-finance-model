@@ -7,9 +7,4 @@ def annualAmount(an, sav):
         data.append(((an * 0.2) * i) + sav)
     return data
 
-def budget(an):
-    data = []
-    for i in range(0, 11):
-        data.append((an * 0.3) * i)
-    return data
 
