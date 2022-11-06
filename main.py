@@ -49,12 +49,12 @@ def sendLineGraph():
     textbox=json.loads(content)
 
     xvalues= []
-    for i in range(2022,2033):
+    for i in range(2022, 2033):
         xvalues.append(i)
     yvalues= processing.annualAmount(float(textbox[0]), float(textbox[1]))
     format_y = []
     for val in yvalues:
-        format_y.append(str(round(val,2)))
+        format_y.append(str(round(val, 2)))
     line_values = [{"x":xvalues,"y":format_y,"type":"line"}]
     return json.dumps(line_values)
 

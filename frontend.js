@@ -7,6 +7,7 @@ function sendPieGraph(jsonBlob){
     };
     Plotly.newPlot('pie',loadData,layout)
 }
+
 function sendLineGraph(jsonBlob) {
     let loadData = JSON.parse(jsonBlob)
     let layout = {
