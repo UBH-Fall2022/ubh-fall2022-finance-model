@@ -172,3 +172,9 @@ br.right{
     clear:right;
 }
 
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:1268px;
+}
+
