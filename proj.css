@@ -71,14 +71,14 @@ p.left_align{
     color:#000000;
     /*padding: 20px;*/
     float: left;
-    font-size: 18px;
+    font-size: 16px;
 }
 p.right_float{
     float: right; 
     padding-right:45px ;
     font-family: "Geneva";
     color:#000000;
-    font-size: 18px;
+    font-size: 16px;
 }
 ul{
     font-family: "Geneva";
